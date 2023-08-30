@@ -26,7 +26,7 @@ public enum HttpResponseBody {
     case html(String)
     case htmlBody(String)
     case text(String)
-    case data(Data, contentType: String? = nil)
+    case data(Data, contentType: String?)
     case custom(Any, (Any) throws -> String)
 
     func content() -> (Int, ((HttpResponseBodyWriter) throws -> Void)?) {
